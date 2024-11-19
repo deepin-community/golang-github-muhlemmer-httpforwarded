@@ -1,5 +1,11 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-muhlemmer-httpforwarded (0.1.0-2) unstable; urgency=medium
 
-  * Initial release
+  * Source-only upload for migration
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Mathias Gibbens <gibmat@debian.org>  Thu, 14 Mar 2024 06:03:39 +0000
+
+golang-github-muhlemmer-httpforwarded (0.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1065009)
+
+ -- Mathias Gibbens <gibmat@debian.org>  Wed, 28 Feb 2024 22:45:09 +0000
