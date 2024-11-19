@@ -1,15 +1,31 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-muhlemmer-httpforwarded
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Mathias Gibbens <gibmat@debian.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-gopkg-check.v1-dev
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-muhlemmer-httpforwarded
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-muhlemmer-httpforwarded.git
+Homepage: https://github.com/muhlemmer/httpforwarded
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/muhlemmer/httpforwarded
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-muhlemmer-httpforwarded-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-gopkg-check.v1-dev,
+         ${misc:Depends}
+Description: Library for parsing the HTTP Forwarded header (RFC-7239)
+ The httpforwarded go package provides utility functions for working
+ with the Forwarded HTTP header as defined in RFC-7239
+ (https://tools.ietf.org/html/rfc7239). This header is proposed to
+ replace the X-Forwarded-For and X-Forwarded-Proto headers, amongst
+ others.
+ .
+ This package was heavily inspired by the mime package in the standard
+ library, more specifically the ParseMediaType() function.
